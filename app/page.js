@@ -210,15 +210,15 @@ export default function Home() {
       {/* ── Section 5: CTA Band ──────────────────────────────────────────── */}
       <section className="bg-green-darkest">
         <div className="max-w-6xl mx-auto px-6 py-24 text-center">
-          <h2 className="font-serif text-3xl md:text-4xl text-green-pale font-medium mb-5">
+          <h2 className="font-serif text-3xl md:text-4xl text-cream font-medium mb-5">
             Ready to know what your data is telling you?
           </h2>
-          <p className="text-muted text-base mb-10">
+          <p className="text-green-pale text-base mb-10">
             Book a free 30-minute discovery call. No pressure, no commitment.
           </p>
           <Link
             href="/contact"
-            className="inline-block bg-green-primary text-green-pale hover:bg-green-light transition-colors duration-150 rounded-lg px-8 py-4 text-sm font-medium no-underline"
+            className="inline-block bg-amber text-white hover:bg-amber-light transition-colors duration-150 rounded-lg px-8 py-4 text-sm font-medium no-underline"
           >
             Book a free call
           </Link>
