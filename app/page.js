@@ -198,7 +198,7 @@ export default function Home() {
                 </p>
                 <div>
                   <p className="text-green-pale font-medium text-sm">{name}</p>
-                  <p className="text-muted text-sm mt-0.5">{role}</p>
+                  <p className="text-green-pale/70 text-sm mt-0.5">{role}</p>
                 </div>
               </div>
             ))}

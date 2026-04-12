@@ -24,7 +24,7 @@ export default function Footer() {
             <span className="font-serif text-base font-medium tracking-[0.2em] text-green-pale uppercase select-none">
               Sycamore Data
             </span>
-            <p className="mt-3 text-sm text-muted leading-relaxed">
+            <p className="mt-3 text-sm text-green-pale/70 leading-relaxed">
               Helping small businesses grow,<br />one insight at a time.
             </p>
           </div>
@@ -32,7 +32,7 @@ export default function Footer() {
           {/* Link columns */}
           <div className="flex gap-16">
             <div>
-              <p className="text-xs uppercase tracking-[0.07em] text-green-highlight mb-5">
+              <p className="text-xs uppercase tracking-[0.07em] text-green-pale mb-5">
                 Services
               </p>
               <ul className="flex flex-col gap-3">
@@ -40,7 +40,7 @@ export default function Footer() {
                   <li key={href}>
                     <Link
                       href={href}
-                      className="text-sm text-muted hover:text-green-pale transition-colors duration-150 no-underline"
+                      className="text-sm text-green-pale hover:text-white transition-colors duration-150 no-underline"
                     >
                       {label}
                     </Link>
@@ -50,7 +50,7 @@ export default function Footer() {
             </div>
 
             <div>
-              <p className="text-xs uppercase tracking-[0.07em] text-green-highlight mb-5">
+              <p className="text-xs uppercase tracking-[0.07em] text-green-pale mb-5">
                 Company
               </p>
               <ul className="flex flex-col gap-3">
@@ -58,7 +58,7 @@ export default function Footer() {
                   <li key={href}>
                     <Link
                       href={href}
-                      className="text-sm text-muted hover:text-green-pale transition-colors duration-150 no-underline"
+                      className="text-sm text-green-pale hover:text-white transition-colors duration-150 no-underline"
                     >
                       {label}
                     </Link>
