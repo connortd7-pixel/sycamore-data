@@ -1,7 +1,21 @@
 @import "tailwindcss";
 
-/* ─── Brand color primitives ─────────────────────────────────────────────── */
-:root {
+/* ─── Design tokens ───────────────────────────────────────────────────────────
+ *
+ * Tailwind v4: a plain @theme block (no "inline") registers each token as:
+ *   1. A Tailwind utility class  →  bg-cream, text-cream, border-cream, etc.
+ *   2. A CSS custom property     →  var(--color-cream) usable anywhere in CSS
+ *
+ * Values must be static (hex/rgb) — not var() references. Using var() here
+ * prevents Tailwind from resolving the token at build time, which is what
+ * broke text-cream and similar utilities previously.
+ *
+ * Naming: --color-{name} → utility suffix is {name}
+ *   text-body, text-muted (not text-text-body) — keep names short and clean.
+ *
+ * ─────────────────────────────────────────────────────────────────────────── */
+@theme {
+  /* Greens */
   --color-green-primary:    #3B6D11;
   --color-green-light:      #639922;
   --color-green-highlight:  #97C459;
@@ -9,46 +23,21 @@
   --color-green-dark:       #27500A;
   --color-green-darkest:    #173404;
 
+  /* Ambers */
   --color-amber:            #BA7517;
   --color-amber-light:      #EF9F27;
 
+  /* Page background */
   --color-cream:            #FAF7F2;
 
-  --color-text-body:        #5F5E5A;
-  --color-text-heading:     #27500A;
-  --color-text-muted:       #888780;
+  /* Semantic text colors (short names → text-body, text-muted, text-heading) */
+  --color-body:             #5F5E5A;
+  --color-muted:            #888780;
+  --color-heading:          #27500A;
 
+  /* Borders */
   --color-border:           #D3D1C7;
   --color-border-light:     #C0DD97;
-}
-
-/* ─── Tailwind theme registration ────────────────────────────────────────── */
-/*
- * Variable names here determine Tailwind utility class names.
- * --color-{name} → bg-{name}, text-{name}, border-{name}, etc.
- * We alias the semantic text tokens to short names so classes read cleanly:
- *   text-body, text-muted, text-heading (not text-text-body, etc.)
- */
-@theme inline {
-  --color-green-primary:    var(--color-green-primary);
-  --color-green-light:      var(--color-green-light);
-  --color-green-highlight:  var(--color-green-highlight);
-  --color-green-pale:       var(--color-green-pale);
-  --color-green-dark:       var(--color-green-dark);
-  --color-green-darkest:    var(--color-green-darkest);
-
-  --color-amber:            var(--color-amber);
-  --color-amber-light:      var(--color-amber-light);
-
-  --color-cream:            var(--color-cream);
-
-  /* Short aliases → text-body, text-muted, text-heading */
-  --color-body:             var(--color-text-body);
-  --color-muted:            var(--color-text-muted);
-  --color-heading:          var(--color-text-heading);
-
-  --color-border:           var(--color-border);
-  --color-border-light:     var(--color-border-light);
 }
 
 /* ─── Base styles ─────────────────────────────────────────────────────────── */
@@ -58,7 +47,7 @@ html {
 
 body {
   background-color: var(--color-cream);
-  color: var(--color-text-body);
+  color: var(--color-body);
   font-family: Inter, ui-sans-serif, system-ui, sans-serif;
   font-size: 16px;
   line-height: 1.7;
@@ -66,6 +55,6 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: var(--color-text-heading);
+  color: var(--color-heading);
   font-weight: 500;
 }

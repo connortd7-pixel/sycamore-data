@@ -210,10 +210,10 @@ export default function Home() {
       {/* ── Section 5: CTA Band ──────────────────────────────────────────── */}
       <section className="bg-green-darkest">
         <div className="max-w-6xl mx-auto px-6 py-24 text-center">
-          <h2 className="font-serif text-3xl md:text-4xl font-medium mb-5" style={{ color: '#FAF7F2' }}>
+          <h2 className="font-serif text-3xl md:text-4xl text-cream font-medium mb-5">
             Ready to know what your data is telling you?
           </h2>
-          <p className="text-base mb-10" style={{ color: '#D3D1C7' }}>
+          <p className="text-green-pale text-base mb-10">
             Book a free 30-minute discovery call. No pressure, no commitment.
           </p>
           <Link
