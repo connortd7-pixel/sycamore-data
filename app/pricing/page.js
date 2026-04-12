@@ -6,7 +6,7 @@ const TIERS = [
   {
     name: 'Starter',
     price: '$299',
-    bestFor: 'Solopreneurs',
+    bestFor: "I just want to know what's working.",
     badge: null,
     featured: false,
     features: [
@@ -20,7 +20,7 @@ const TIERS = [
   {
     name: 'Growth',
     price: '$699',
-    bestFor: 'Growing teams',
+    bestFor: 'I want regular insights I can actually act on.',
     badge: 'Most Popular',
     featured: true,
     features: [
@@ -35,7 +35,7 @@ const TIERS = [
   {
     name: 'Pro',
     price: '$1,299',
-    bestFor: 'Established SMBs',
+    bestFor: 'I need a real data partner.',
     badge: null,
     featured: false,
     features: [
@@ -119,7 +119,7 @@ export default function PricingPage() {
                     <h2 className="text-green-dark font-medium text-xl mb-1">
                       {name}
                     </h2>
-                    <p className="text-muted text-sm mb-4">Best for: {bestFor}</p>
+                    <p className="text-body text-sm italic mb-4">{bestFor}</p>
                     <div className="flex items-baseline gap-1">
                       <span className="font-serif text-4xl text-green-dark font-medium">
                         {price}
