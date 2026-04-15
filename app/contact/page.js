@@ -1,3 +1,5 @@
+import CalendlyEmbed from '@/components/CalendlyEmbed';
+
 const TRUST_ITEMS = [
   {
     icon: '📅',
@@ -46,12 +48,7 @@ export default function ContactPage() {
 
             {/* ── Left: Calendly embed (~60%) ── */}
             <div className="flex-[3]">
-              {/* TODO: Replace this div with Calendly inline embed once URL is available */}
-              <div className="bg-white border border-border rounded-xl h-[600px] flex items-center justify-center">
-                <p className="text-muted text-sm">
-                  Calendly booking widget will load here
-                </p>
-              </div>
+              <CalendlyEmbed />
             </div>
 
             {/* ── Right: Contact form (~40%) ── */}
