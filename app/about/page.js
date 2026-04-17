@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 const SKILLS = [
   'SQL', 'Python', 'R', 'Tableau', 'Power BI',
-  'Google Looker Studio', 'Excel', 'Azure', 'MySQL',
+  'Google Looker Studio', 'Excel', 'Azure',
 ];
 
 export const metadata = {
